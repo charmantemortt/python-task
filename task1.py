@@ -1,6 +1,8 @@
+
+result = []
+
 def generate(n):
-    n = int(input())
-    result = []
+
     def backtrack(current, open_count, close_count):
         if len(current) == 2 * n:
             result.append(current)
@@ -13,4 +15,6 @@ def generate(n):
 
     backtrack('', 0, 0)
     return result
-
+n = int(input())
+generate(n)
+print(result)
